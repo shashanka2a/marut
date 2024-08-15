@@ -9,8 +9,13 @@
     <style>
         /* Custom Styles */
         .hero-bg {
-            background: url('https://images.unsplash.com/photo-1505842077093-1ee9a44a8d50') no-repeat center center;
+            background: url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad') no-repeat center center;
             background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
         .fade-in {
@@ -36,17 +41,137 @@
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease-in-out;
         }
+
+        /* Button Animation */
+        .btn-animate {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-decoration: none;
+            overflow: hidden;
+            transition: .5s;
+            letter-spacing: 4px;
+            border-radius: 50px;
+            color: #FFF;
+            background: #FFB703;
+        }
+
+        .btn-animate span {
+            position: absolute;
+            display: block;
+        }
+
+        .btn-animate span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #fff);
+            animation: btn-anim1 1s linear infinite;
+        }
+
+        .btn-animate:hover span:nth-child(1) {
+            left: 100%;
+            transition: 1s;
+        }
+
+        @keyframes btn-anim1 {
+            0% {
+                left: -100%;
+            }
+
+            50%, 100% {
+                left: 100%;
+            }
+        }
+
+        .btn-animate span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #fff);
+            animation: btn-anim2 1s linear infinite;
+            animation-delay: .25s;
+        }
+
+        .btn-animate:hover span:nth-child(2) {
+            top: 100%;
+            transition: 1s;
+        }
+
+        @keyframes btn-anim2 {
+            0% {
+                top: -100%;
+            }
+
+            50%, 100% {
+                top: 100%;
+            }
+        }
+
+        .btn-animate span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #fff);
+            animation: btn-anim3 1s linear infinite;
+            animation-delay: .5s;
+        }
+
+        .btn-animate:hover span:nth-child(3) {
+            right: 100%;
+            transition: 1s;
+        }
+
+        @keyframes btn-anim3 {
+            0% {
+                right: -100%;
+            }
+
+            50%, 100% {
+                right: 100%;
+            }
+        }
+
+        .btn-animate span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #fff);
+            animation: btn-anim4 1s linear infinite;
+            animation-delay: .75s;
+        }
+
+        .btn-animate:hover span:nth-child(4) {
+            bottom: 100%;
+            transition: 1s;
+        }
+
+        @keyframes btn-anim4 {
+            0% {
+                bottom: -100%;
+            }
+
+            50%, 100% {
+                bottom: 100%;
+            }
+        }
     </style>
 </head>
 
 <body class="font-sans antialiased text-gray-900">
 
     <!-- Hero Section -->
-    <section class="hero-bg h-screen flex items-center justify-center text-center text-white">
+    <section class="hero-bg text-white">
         <div class="fade-in">
-            <h1 class="text-5xl font-bold">Revolutionizing Rural Mobility</h1>
-            <p class="mt-4 text-xl">Affordable, Efficient, and Eco-friendly Electric Scooters for India</p>
-            <a href="#features" class="mt-8 inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-lg transition">Explore Marut</a>
+            <h1 class="text-6xl font-bold mb-6">Revolutionizing Rural Mobility</h1>
+            <p class="text-2xl mb-8">Affordable, Efficient, and Eco-friendly Electric Scooters for India</p>
+            <a href="#features" class="btn-animate"><span></span><span></span><span></span><span></span>Explore Marut</a>
         </div>
     </section>
 
@@ -69,28 +194,22 @@
     <!-- Features Section -->
     <section id="features" class="py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-gray-800">Key Features</h2>
-            <div class="flex flex-wrap mt-10">
-                <div class="w-full md:w-1/3 p-4">
-                    <div class="bg-white rounded-lg shadow-lg p-6 text-center card">
-                        <img src="https://image.shutterstock.com/image-vector/battery-icon-vector-illustration-flat-260nw-1506004712.jpg" alt="Efficiency" class="mx-auto w-16 h-16">
-                        <h3 class="mt-4 text-2xl font-semibold text-gray-800">High Efficiency</h3>
-                        <p class="mt-2 text-gray-600">Maximize your range with our highly efficient battery and motor system.</p>
-                    </div>
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Key Features</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card hover-grow">
+                    <img src="https://image.shutterstock.com/image-vector/battery-icon-vector-illustration-flat-260nw-1506004712.jpg" alt="Efficiency" class="mx-auto w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-800">High Efficiency</h3>
+                    <p class="mt-2 text-gray-600">Maximize your range with our highly efficient battery and motor system.</p>
                 </div>
-                <div class="w-full md:w-1/3 p-4">
-                    <div class="bg-white rounded-lg shadow-lg p-6 text-center card">
-                        <img src="https://image.shutterstock.com/image-vector/recycling-icon-260nw-1386715728.jpg" alt="Eco-Friendly" class="mx-auto w-16 h-16">
-                        <h3 class="mt-4 text-2xl font-semibold text-gray-800">Eco-Friendly</h3>
-                        <p class="mt-2 text-gray-600">Powered by clean energy, our scooters reduce your carbon footprint.</p>
-                    </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card hover-grow">
+                    <img src="https://image.shutterstock.com/image-vector/recycling-icon-260nw-1386715728.jpg" alt="Eco-Friendly" class="mx-auto w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-800">Eco-Friendly</h3>
+                    <p class="mt-2 text-gray-600">Powered by clean energy, our scooters reduce your carbon footprint.</p>
                 </div>
-                <div class="w-full md:w-1/3 p-4">
-                    <div class="bg-white rounded-lg shadow-lg p-6 text-center card">
-                        <img src="https://image.shutterstock.com/image-vector/steel-icon-vector-modern-flat-260nw-1530158912.jpg" alt="Durability" class="mx-auto w-16 h-16">
-                        <h3 class="mt-4 text-2xl font-semibold text-gray-800">Built to Last</h3>
-                        <p class="mt-2 text-gray-600">Designed to withstand the toughest rural environments.</p>
-                    </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center card hover-grow">
+                    <img src="https://image.shutterstock.com/image-vector/steel-icon-vector-modern-flat-260nw-1530158912.jpg" alt="Durability" class="mx-auto w-16 h-16 mb-4">
+                    <h3 class="text-2xl font-semibold text-gray-800">Built to Last</h3>
+                    <p class="mt-2 text-gray-600">Designed to withstand the toughest rural environments.</p>
                 </div>
             </div>
         </div>
@@ -99,29 +218,30 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-gray-800">What Our Customers Say</h2>
-            <div class="mt-10 flex flex-wrap">
-                <div class="w-full md:w-1/2 p-4">
-                    <div class="bg-white rounded-lg shadow-lg p-6 card">
-                        <p class="text-gray-600 italic">"Marut has changed the way I travel. The scooter is perfect for my daily commute to the market, and I love that it's eco-friendly."</p>
-                        <div class="mt-4 flex items-center">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Customer 1" class="w-12 h-12 rounded-full">
-                            <div class="ml-4">
-                                <h4 class="font-semibold text-gray-800">Ravi Sharma</h4>
-                                <p class="text-gray-600 text-sm">Farmer, Maharashtra</p>
-                            </div>
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">What Our Customers Say</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover-grow">
+                    <p class="text-gray-600 italic">"Marut has changed the way I travel. The scooter is perfect for my daily commute to the market, and I love that it's ecoIt seems there was a technical interruption, so I will continue from where it was cut off.
+
+### Updated Code Continuation:
+
+```html
+                    <p class="text-gray-600 italic">"Marut has changed the way I travel. The scooter is perfect for my daily commute to the market, and I love that it's eco-friendly."</p>
+                    <div class="mt-4 flex items-center">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Customer 1" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Ravi Sharma</h4>
+                            <p class="text-gray-600 text-sm">Farmer, Maharashtra</p>
                         </div>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 p-4">
-                    <div class="bg-white rounded-lg shadow-lg p-6 card">
-                        <p class="text-gray-600 italic">"The durability of the Marut scooter is incredible. It handles the rough roads in our village with ease."</p>
-                        <div class="mt-4 flex items-center">
-                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Customer 2" class="w-12 h-12 rounded-full">
-                            <div class="ml-4">
-                                <h4 class="font-semibold text-gray-800">Suman Devi</h4>
-                                <p class="text-gray-600 text-sm">Shopkeeper, Uttar Pradesh</p>
-                            </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 hover-grow">
+                    <p class="text-gray-600 italic">"The durability of the Marut scooter is incredible. It handles the rough roads in our village with ease."</p>
+                    <div class="mt-4 flex items-center">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="Customer 2" class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Suman Devi</h4>
+                            <p class="text-gray-600 text-sm">Shopkeeper, Uttar Pradesh</p>
                         </div>
                     </div>
                 </div>
@@ -134,7 +254,7 @@
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-4xl font-bold">Join the Marut Revolution</h2>
             <p class="mt-4 text-lg">Be part of the change. Order your Marut e-scooter today and transform your mobility experience.</p>
-            <a href="#contact" class="mt-8 inline-block bg-white text-yellow-500 font-semibold py-3 px-6 rounded-lg transition hover:bg-gray-200">Get Started</a>
+            <a href="#contact" class="mt-8 btn-animate"><span></span><span></span><span></span><span></span>Get Started</a>
         </div>
     </section>
 
@@ -149,16 +269,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Optional JavaScript for Animations -->
-    <script>
-        // Add any custom JavaScript here forHere's the completion of the updated landing page with improved visuals, animations, and hover effects, while maintaining the existing color scheme. I've added animations to enhance the user experience, making the landing page more engaging.
-
-```html
-    <!-- Optional JavaScript for Animations -->
-    <script>
-        // Add any custom JavaScript here for interactivity
-    </script>
 
 </body>
 
