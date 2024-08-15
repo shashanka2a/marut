@@ -14,17 +14,28 @@
         }
 
         .hero-bg {
-            background: #2E2E3A; /* Dark background color to match provided design */
+            background: #2E2E3A;
             height: 100vh;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            text-align: center;
+            text-align: left;
+            padding: 0 50px;
         }
 
         .hero-text {
-            font-family: 'Georgia', serif; /* A serif font for an elegant touch */
+            font-family: 'Georgia', serif;
             color: #FFFFFF;
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-image {
+            max-width: 40%;
+            margin-right: 50px;
         }
 
         .hover-grow:hover {
@@ -33,13 +44,15 @@
         }
 
         .card {
-            background-color: #2E2E3A;
+            background-color: #3E3E4A;
             color: #F5F5FA;
             transition: all 0.3s ease-in-out;
+            border-radius: 10px;
+            padding: 20px;
         }
 
         .card:hover {
-            background-color: #3E3E4A;
+            background-color: #4E4E5A;
             transform: translateY(-10px);
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
         }
@@ -48,7 +61,7 @@
             display: inline-block;
             padding: 15px 30px;
             font-size: 18px;
-            font-family: 'Cursive', sans-serif; /* Cursive font for button text */
+            font-family: 'Cursive', sans-serif;
             color: #2E2E3A;
             background-color: #FFFFFF;
             border-radius: 5px;
@@ -59,6 +72,16 @@
             background-color: #F5F5FA;
             color: #2E2E3A;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-section {
+            background-color: #FF7043;
+            color: #FFFFFF;
+        }
+
+        .cta-section a {
+            color: #2E2E3A;
+            background-color: #FFFFFF;
         }
 
         a {
@@ -80,6 +103,9 @@
             <h1 class="text-6xl font-bold mb-6">Explore the Future of Urban Mobility</h1>
             <p class="text-2xl mb-8">Reliable, Affordable, and Environmentally Friendly Electric Scooters</p>
             <a href="#features" class="btn-animate">Ride with Marut</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://img1.wsimg.com/isteam/stock/24407/:/rs=w:1280" alt="Marut Scooter">
         </div>
     </section>
 
@@ -104,18 +130,18 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">Key Features</h2>
             <div class="grid md:grid-cols-3 gap-10">
-                <div class="card p-6 text-center hover-grow rounded-lg shadow-lg">
-                    <img src="https://img1.wsimg.com/isteam/ip/6780d98d-d203-4c88-a4b5-92f88add9d5e/pexels-olly-716421.jpg/:/cr=t:0%25,l:16.66%25,w:66.68%25,h:100%25/rs=w:365,h:365,cg:true" alt="Efficiency" class="mx-auto w-16 h-16 mb-4">
+                <div class="card text-center hover-grow">
+                    <img src="https://img1.wsimg.com/isteam/ip/6780d98d-d203-4c88-a4b5-92f88add9d5e/pexels-olly-716421.jpg/:/cr=t:0%25,l:16.66%25,w:66.68%25,h:100%25/rs=w:365,h:365,cg=true" alt="Safety First" class="mx-auto w-16 h-16 mb-4">
                     <h3 class="text-2xl font-semibold">Safety First</h3>
                     <p class="mt-2">Designed with a top speed of 35 km/h, ensuring a safe ride for everyone.</p>
                 </div>
-                <div class="card p-6 text-center hover-grow rounded-lg shadow-lg">
-                    <img src="https://img1.wsimg.com/isteam/ip/6780d98d-d203-4c88-a4b5-92f88add9d5e/pexels-kindelmedia-9799997.jpg/:/cr=t:12.5%25,l:0%25,w:100%25,h:75%25/rs=w:365,h:365,cg:true" alt="Eco-Friendly" class="mx-auto w-16 h-16 mb-4">
+                <div class="card text-center hover-grow">
+                    <img src="https://img1.wsimg.com/isteam/ip/6780d98d-d203-4c88-a4b5-92f88add9d5e/pexels-kindelmedia-9799997.jpg/:/cr=t:12.5%25,l:0%25,w:100%25,h:75%25/rs=w:365,h:365,cg=true" alt="Battery Efficiency" class="mx-auto w-16 h-16 mb-4">
                     <h3 class="text-2xl font-semibold">Battery Efficiency</h3>
                     <p class="mt-2">Long-lasting battery life with up to 60 km on a single charge.</p>
                 </div>
-                <div class="card p-6 text-center hover-grow rounded-lg shadow-lg">
-                    <img src="https://img1.wsimg.com/isteam/ip/6780d98d-d203-4c88-a4b5-92f88add9d5e/pexels-cottonbro-5077393.jpg/:/cr=t:0%25,l:16.66%25,w:66.68%25,h:100%25/rs=w:365,h:365,cg:true" alt="Durability" class="mx-auto w-16 h-16 mb-4">
+                <div class="card text-center hover-grow">
+                    <img src="https://img1.wsimg.com/isteam/ip/6780d98d-d203-4c88-a4b5-92f88add9d5e/pexels-cottonbro-5077393.jpg/:/cr=t:0%25,l:16.66%25,w:66.68%25,h:100%25/rs=w:365,h:365,cg=true" alt="Smart Connect" class="mx-auto w-16 h-16 mb-4">
                     <h3 class="text-2xl font-semibold">Smart Connect</h3>
                     <p class="mt-2">Track your scooter’s live location, battery status, and maintenance schedule with the Marut mobile app.</p>
                 </div>
@@ -145,7 +171,6 @@
                         <div class="ml-4">
                             <h4 class="font-semibold">Suman Devi</h4>
                             <p class="text-sm">Shopkeeper, Uttar Pradesh</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -153,7 +178,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section id="cta" class="py-20 text-white text-center">
+    <section id="cta" class="cta-section py-20 text-white text-center">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold">Join the Marut Revolution</h2>
             <p class="mt-4 text-lg">Be part of the change. Order your Marut e-scooter today and transform your mobility experience.</p>
